@@ -1,0 +1,14 @@
+C:\Users\Laurenz Haase\Meine_Projekte\VisualStudio\Mühle\bin\Debug\net7.0\Mühle.exe
+C:\Users\Laurenz Haase\Meine_Projekte\VisualStudio\Mühle\bin\Debug\net7.0\Mühle.deps.json
+C:\Users\Laurenz Haase\Meine_Projekte\VisualStudio\Mühle\bin\Debug\net7.0\Mühle.runtimeconfig.json
+C:\Users\Laurenz Haase\Meine_Projekte\VisualStudio\Mühle\bin\Debug\net7.0\Mühle.dll
+C:\Users\Laurenz Haase\Meine_Projekte\VisualStudio\Mühle\bin\Debug\net7.0\Mühle.pdb
+C:\Users\Laurenz Haase\Meine_Projekte\VisualStudio\Mühle\obj\Debug\net7.0\Mühle.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Laurenz Haase\Meine_Projekte\VisualStudio\Mühle\obj\Debug\net7.0\Mühle.AssemblyInfoInputs.cache
+C:\Users\Laurenz Haase\Meine_Projekte\VisualStudio\Mühle\obj\Debug\net7.0\Mühle.AssemblyInfo.cs
+C:\Users\Laurenz Haase\Meine_Projekte\VisualStudio\Mühle\obj\Debug\net7.0\Mühle.csproj.CoreCompileInputs.cache
+C:\Users\Laurenz Haase\Meine_Projekte\VisualStudio\Mühle\obj\Debug\net7.0\Mühle.dll
+C:\Users\Laurenz Haase\Meine_Projekte\VisualStudio\Mühle\obj\Debug\net7.0\refint\Mühle.dll
+C:\Users\Laurenz Haase\Meine_Projekte\VisualStudio\Mühle\obj\Debug\net7.0\Mühle.pdb
+C:\Users\Laurenz Haase\Meine_Projekte\VisualStudio\Mühle\obj\Debug\net7.0\Mühle.genruntimeconfig.cache
+C:\Users\Laurenz Haase\Meine_Projekte\VisualStudio\Mühle\obj\Debug\net7.0\ref\Mühle.dll

@@ -1,0 +1,144 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\ui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|solutionrelative:ui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|c:\\users\\laurenz haase\\meine_projekte\\visualstudio\\m\u00FChle\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|solutionrelative:board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\move.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|solutionrelative:move.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\movegeneration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|solutionrelative:movegeneration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|solutionrelative:gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|c:\\users\\laurenz haase\\meine_projekte\\visualstudio\\m\u00FChle\\speedtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|solutionrelative:speedtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UI.cs",
+              "DocumentMoniker": "C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\UI.cs",
+              "RelativeDocumentMoniker": "UI.cs",
+              "ToolTip": "C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\UI.cs",
+              "RelativeToolTip": "UI.cs",
+              "ViewState": "AQIAAE4AAAAAAAAAAAAmwGcAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T15:41:21.918Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SpeedTest.cs",
+              "DocumentMoniker": "C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\SpeedTest.cs",
+              "RelativeDocumentMoniker": "SpeedTest.cs",
+              "ToolTip": "C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\SpeedTest.cs",
+              "RelativeToolTip": "SpeedTest.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T07:31:06.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GameState.cs",
+              "DocumentMoniker": "C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\GameState.cs",
+              "RelativeDocumentMoniker": "GameState.cs",
+              "ToolTip": "C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\GameState.cs",
+              "RelativeToolTip": "GameState.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T18:46:28.868Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MoveGeneration.cs",
+              "DocumentMoniker": "C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\MoveGeneration.cs",
+              "RelativeDocumentMoniker": "MoveGeneration.cs",
+              "ToolTip": "C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\MoveGeneration.cs",
+              "RelativeToolTip": "MoveGeneration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAKUAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T16:28:55.707Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Move.cs",
+              "DocumentMoniker": "C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\Move.cs",
+              "RelativeDocumentMoniker": "Move.cs",
+              "ToolTip": "C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\Move.cs",
+              "RelativeToolTip": "Move.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T16:25:29.103Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Board.cs",
+              "DocumentMoniker": "C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\Board.cs",
+              "RelativeDocumentMoniker": "Board.cs",
+              "ToolTip": "C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\Board.cs",
+              "RelativeToolTip": "Board.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAQwGcAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T15:40:38.085Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T15:39:03.34Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
