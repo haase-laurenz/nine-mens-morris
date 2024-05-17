@@ -67,11 +67,11 @@ namespace Mühle
 		public char activeChar = 'X';
 		public char enemyChar = 'O';
 		public GameState state;
-		public bool startingPhase = true;
 		public List<Move> playedMoves = new List<Move>();
 		public int xStonesLeft = 9;
 		public int oStonesLeft = 9;
 		public bool activeCanCapture = false;
+		public List<string> positionsHistory = new List<string>();
 		
 		public Board()
 		{
@@ -89,6 +89,18 @@ namespace Mühle
 
 			
 
+		}
+
+		public string positionToString()
+		{
+			string res = "";
+
+			foreach (char c in board)
+			{
+				res += c;
+			}
+
+			return res;
 		}
 
 		public void updateBoardFromUI()
@@ -112,46 +124,57 @@ namespace Mühle
 			{
 				state  = GameState.StartingPhase;
 			}
+			else if (enemyPieces < 3 || ownPieces<3 || MoveGeneration.GenerateLegalMoves(this).Length == 0) 
+			{
+				state = GameState.Finished;
+			}
+			else if (positionsHistory.Contains(positionToString()))
+			{
+				state = GameState.Draw;
+			}
 			else if (ownPieces > 3)
 			{
 				state = GameState.MidGame;
-			}
-			else if (enemyPieces < 3 || ownPieces<3) 
-			{
-				state = GameState.Finished;
 			}
 			else
 			{
 				state = GameState.EndGame;
 			}
 		}
-		public void MakeMove(Move move)
+		public void MakeMoveFromUI(Move move)
 		{
+
+			positionsHistory.Add(positionToString());
+
+			Move[] allMoves = MoveGeneration.GenerateLegalMoves(this);
+
+			bool moveNotFound = true;
+			foreach (Move possibleMove in allMoves)
+			{
+				if (move.Equals(possibleMove))
+				{
+					moveNotFound = false;
+					break;
+				}
+			}
+
+			if (moveNotFound) throw new Exception("Illegal Move");
 
 			if (state == GameState.StartingPhase) 
 			{
 
-				if (move.target == -1) int.Parse("ThrowException");
-				if (move.start != -1 ) int.Parse("ThrowException");
-				if (board[move.target] != ' ') int.Parse("ThrowException");
-
 				board[move.target] = activeChar;
 
-				UpdateCanCapture(move.target);
-
-				board[move.target] = ' ';
 
 				if (move.captured != -1)
 				{
 
-					if (!activeCanCapture) int.Parse("ThrowException");
-					if (board[move.captured] != enemyChar) int.Parse("ThrowException");
 
 					board[move.captured] = ' ';
 
 				}
 
-					if (active == 0)
+				if (active == 0)
 				{
 					xStonesLeft--;
 				}
@@ -160,11 +183,46 @@ namespace Mühle
 					oStonesLeft--;
 				}
 
+
+				
+
+			}
+			else if (state == GameState.MidGame)
+			{
+
+				board[move.start] = ' ';
 				board[move.target] = activeChar;
 
+				if (move.captured != -1)
+				{
+
+					board[move.captured] = ' ';
+
+				}
 
 
 			}
+			else if(state == GameState.EndGame)
+			{
+
+				board[move.start] = ' ';
+				board[move.target] = activeChar;
+
+				if (move.captured != -1)
+				{
+
+					board[move.captured] = ' ';
+
+				}
+
+			}
+			else
+			{
+				throw new Exception("ILLEGAL STATE");
+			}
+
+
+			
 
 			active ^= 1;
 			(activeChar, enemyChar) = (enemyChar, activeChar);
@@ -176,8 +234,139 @@ namespace Mühle
 
 		}
 
+		public void MakeMove(Move move)
+		{
+
+			if (state == GameState.StartingPhase)
+			{
+
+				board[move.target] = activeChar;
+
+
+				if (move.captured != -1)
+				{
+
+
+					board[move.captured] = ' ';
+
+				}
+
+				if (active == 0)
+				{
+					xStonesLeft--;
+				}
+				else
+				{
+					oStonesLeft--;
+				}
+
+
+
+
+			}
+			else if (state == GameState.MidGame)
+			{
+
+				board[move.start] = ' ';
+				board[move.target] = activeChar;
+
+				if (move.captured != -1)
+				{
+
+					board[move.captured] = ' ';
+
+				}
+
+
+			}
+			else if (state == GameState.EndGame)
+			{
+
+				board[move.start] = ' ';
+				board[move.target] = activeChar;
+
+				if (move.captured != -1)
+				{
+
+					board[move.captured] = ' ';
+
+				}
+
+			}
+
+			active ^= 1;
+			(activeChar, enemyChar) = (enemyChar, activeChar);
+			activeCanCapture = false;
+			
+		}
+
 		public void UndoMove(Move move)
 		{
+
+			active ^= 1;
+			(activeChar, enemyChar) = (enemyChar, activeChar);
+
+			if (state == GameState.StartingPhase)
+			{
+
+				board[move.target] = ' ';
+
+
+				if (move.captured != -1)
+				{
+
+
+					board[move.captured] = enemyChar;
+
+				}
+
+				if (active == 0)
+				{
+					xStonesLeft++;
+				}
+				else
+				{
+					oStonesLeft++;
+				}
+
+
+
+
+			}
+			else if (state == GameState.MidGame)
+			{
+
+				board[move.start] = activeChar;
+				board[move.target] = ' ';
+
+				if (move.captured != -1)
+				{
+
+					board[move.captured] = enemyChar;
+
+				}
+
+
+			}
+			else if (state == GameState.EndGame)
+			{
+
+				board[move.start] = activeChar;
+				board[move.target] = ' ';
+
+				if (move.captured != -1)
+				{
+
+					board[move.captured] = enemyChar;
+
+				}
+
+			}
+
+			
+
+
+
 
 		}
 
@@ -192,21 +381,29 @@ namespace Mühle
 			foreach (int[] mill in MILLS)
 			{
 				bool millFound = true;
+				bool targetFound = false;
 				// Überprüfe, ob alle Felder der Mühle vom Spieler besetzt sind
 				for (int i = 0;i<3;i++)
 				{
 					int field = mill[i];
+
+					if(field == target) targetFound = true;
 
 					if (board[field] != activeChar)
 					{
 						millFound = false;
 						break; // Keine Mühle, zum nächsten Mill gehen
 					}
+
+					
 				}
 				// Wenn eine Mühle gefunden wurde, gib true zurück
-				if (millFound)
+				if (millFound && targetFound)
+				{
 					activeCanCapture = true;
 					return;
+				}
+					
 			}
 			// Keine Mühle gefunden
 			activeCanCapture = false;
@@ -255,12 +452,12 @@ namespace Mühle
 
 			Console.WriteLine();
 			Move[] moves = MoveGeneration.GenerateLegalMoves(this);
-			foreach(Move move in moves)
+			foreach (Move move in moves)
 			{
-				Console.WriteLine(move.ToString() );
+				Console.WriteLine(move.ToString());
 			}
 
-			Console.WriteLine(moves.Length+" Moves");
+			Console.WriteLine(moves.Length + " Moves");
 
 			Console.WriteLine(state);
 		}

@@ -13,6 +13,7 @@ namespace Mühle
 		MidGame = 3,
 		EndGame = 4,
 		Finished = 5,
-		Cancelled = 6,
+		Draw = 6,
+		Cancelled = 7,
 	}
 }

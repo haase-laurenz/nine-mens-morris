@@ -27,25 +27,49 @@ namespace Mühle
 				if (runningGame)
 				{
 
-					currentBoard?.Display();
-					Console.Write("Input Move/Command: ");
-
-					if(false && currentBoard?.active == 1)
+					if (currentBoard?.state != GameState.Finished && currentBoard?.state != GameState.Draw)
 					{
-						Move[] moves = MoveGeneration.GenerateLegalMoves(currentBoard);
+						currentBoard?.Display();
+						Console.Write("Input Move/Command: ");
+						currentBoard?.updateBoardFromUI();
+						if (false)
+						{
+							Move[] moves = MoveGeneration.GenerateLegalMoves(currentBoard);
 
-						Random random = new Random();
-						int randomIndex = random.Next(0, moves.Length);
+							Random random = new Random();
+							int randomIndex = random.Next(0, moves.Length);
 
-						Move randomMove = moves[randomIndex];
+							Move randomMove = moves[randomIndex];
 
-						currentBoard?.MakeMove(randomMove);
-						Console.WriteLine(randomMove);
+							currentBoard?.MakeMoveFromUI(randomMove);
+							Console.WriteLine(randomMove);
+							//Thread.Sleep(10);
+							currentBoard?.updateBoardFromUI();
+							continue;
+						}
 
-						continue;
 					}
-					
+					else
+					{
+						Console.ForegroundColor = ConsoleColor.Blue;
+						if (currentBoard.state == GameState.Finished)
+						{
+							Console.WriteLine($"{currentBoard.enemyChar} has won.");
+						}else
+						{
+							Console.WriteLine("Draw by repitition");
+						}
 
+						Console.WriteLine("");
+						runningGame = false;
+						currentBoard = null;
+
+						Console.ForegroundColor = ConsoleColor.Green;
+						Console.WriteLine("Closed current Game.");
+						Console.ForegroundColor = ConsoleColor.White;
+						Console.WriteLine("");
+
+					}
 				}
 
 
@@ -108,7 +132,11 @@ namespace Mühle
 					SpeedTest.MoveGenTest(100000);
 					continue;
 				}
-
+				else if (input == "perft")
+				{
+					SpeedTest.PerftTest();
+					continue;
+				}
 				else if (input == "help -moves")
 				{
 
@@ -126,6 +154,10 @@ namespace Mühle
 					
 					string[] parts = input.Trim().Split(' ');
 
+					string input1;
+					string input2;
+					string input3;
+
 					switch (parts.Length)
 					{
 
@@ -134,13 +166,13 @@ namespace Mühle
 							break;
 						case 1:
 
-							string targetField = parts[0];
+							input1 = parts[0];
 
 							try
 							{
-								Move move = new Move(-1,int.Parse(targetField),-1);
+								Move move = new Move(-1,int.Parse(input1),-1);
 
-								currentBoard?.MakeMove(move);
+								currentBoard?.MakeMoveFromUI(move);
 
 								
 
@@ -155,24 +187,24 @@ namespace Mühle
 						case 2:
 
 
-							string startField = parts[0];
-							string endField	  = parts[1];
+							input1 = parts[0];
+							input2 = parts[1];
 
 							try
 							{
 
 								Move move;
-								if (currentBoard.startingPhase)
+								if (currentBoard?.state == GameState.StartingPhase)
 								{
-									move = new Move(-1, int.Parse(startField), int.Parse(endField));
+									move = new Move(-1, int.Parse(input1), int.Parse(input2));
 								}
 								else
 								{
-									move = new Move(int.Parse(startField), int.Parse(endField), -1);
+									move = new Move(int.Parse(input1), int.Parse(input2), -1);
 								}
 								
 
-								currentBoard.MakeMove(move);
+								currentBoard?.MakeMoveFromUI(move);
 
 							}
 							catch
@@ -184,6 +216,31 @@ namespace Mühle
 
 						case 3:
 
+							input1 = parts[0];
+							input2 = parts[1];
+							input3 = parts[2];
+
+							try
+							{
+
+								Move move;
+								if (currentBoard?.state == GameState.StartingPhase)
+								{
+									throw new Exception("");
+								}
+								else
+								{
+									move = new Move(int.Parse(input1), int.Parse(input2), int.Parse(input3));
+								}
+
+
+								currentBoard?.MakeMoveFromUI(move);
+
+							}
+							catch
+							{
+								PrintWrongMoveInut();
+							}
 
 							break;
 
@@ -197,8 +254,8 @@ namespace Mühle
 
 
 					}
-
 					currentBoard?.updateBoardFromUI();
+
 				}
 				
 				else

@@ -16,7 +16,7 @@ namespace Mühle
 			List<int> enemyPieces = new List<int>();
 			List<int> activePieces = new List<int>();
 			List<int> emptyFields = new List<int>();
-			
+
 			for (int i = 0; i < 24; i++)
 			{
 				if (board.board[i] == board.enemyChar)
@@ -33,41 +33,38 @@ namespace Mühle
 				}
 			}
 
+			
+
+
+
 			if (board.state == GameState.StartingPhase)
 			{
 
-				for (int i = 0; i < 8; i++)
-				{
-					for (int j = 0; j < 3; j++)
+				foreach(int field in emptyFields) { 
+
+					board.board[field] = board.activeChar;
+
+					board.UpdateCanCapture(field);
+
+					if (board.activeCanCapture)
 					{
-						if (board.board[i*3+j] == ' ')
+						foreach(int enemyPiece in enemyPieces)
 						{
-
-							board.board[i * 3 + j] = board.activeChar;
-
-							board.UpdateCanCapture(i * 3 + j);
-
-							if (board.activeCanCapture)
-							{
-								foreach(int enemyPiece in enemyPieces)
-								{
-									moves.Add(new Move(-1, i * 3 + j, enemyPiece));
-								}
-							}
-							else
-							{
-								moves.Add(new Move(-1, i * 3 + j, -1));
-							}
-							// Hinzufügen eines Zugs zum Platzieren eines Steins an dieser Position
-							
-
-							board.board[i * 3 + j] = ' ';
-							board.activeCanCapture = false;
-
-
+							moves.Add(new Move(-1, field, enemyPiece));
 						}
 					}
+					else
+					{
+						moves.Add(new Move(-1, field, -1));
+					}
+					// Hinzufügen eines Zugs zum Platzieren eines Steins an dieser Position
+							
+
+					board.board[field] = ' ';
+					board.activeCanCapture = false;
+
 				}
+
 
 			}
 			else
@@ -76,51 +73,46 @@ namespace Mühle
 				if (board.state == GameState.MidGame)
 				{
 
-					for (int i = 0; i < 8; i++)
+					foreach (int field in activePieces)
 					{
-						for (int j = 0; j < 3; j++)
+
+						int[] neighbours = Board.EDGES[field];
+
+						for (int k = 0; k < neighbours.Length; k++)
 						{
-							int field = i * 3 + j;
-							if (board.board[field] == board.activeChar)
+							int neighbour = neighbours[k];
+							if (board.board[neighbour] == ' ')
 							{
 
-								int[] neighbours = Board.EDGES[field];
+								board.board[neighbour] = board.activeChar;
+								board.board[field] = ' ';
 
-								for (int k = 0; k < neighbours.Length; k++)
+								board.UpdateCanCapture(field);
+
+								if (board.activeCanCapture)
 								{
-									int neighbour = neighbours[k];
-									if (board.board[neighbour] == ' ')
+									foreach (int enemyPiece in enemyPieces)
 									{
-
-										board.board[neighbour] = board.activeChar;
-										board.board[field] = ' ';
-
-										board.UpdateCanCapture(i * 3 + j);
-
-										if (board.activeCanCapture)
-										{
-											foreach (int enemyPiece in enemyPieces)
-											{
-												moves.Add(new Move(field, neighbour, enemyPiece));
-											}
-										}
-										else
-										{
-											moves.Add(new Move(field, neighbour, -1));
-										}
-
-										board.activeCanCapture = false;
-										board.board[field] = board.activeChar;
-										board.board[neighbour] = ' ';
-
+										moves.Add(new Move(field, neighbour, enemyPiece));
 									}
-
 								}
+								else
+								{
+									moves.Add(new Move(field, neighbour, -1));
+								}
+
+								board.activeCanCapture = false;
+								board.board[field] = board.activeChar;
+								board.board[neighbour] = ' ';
 
 							}
 
 						}
+
 					}
+
+						
+					
 				}
 
 				else if(board.state == GameState.EndGame)
@@ -161,10 +153,7 @@ namespace Mühle
 
 
 				}
-				else
-				{
-					throw new NotImplementedException("ERROR");
-				}
+
 
 
 

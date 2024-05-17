@@ -12,3 +12,4 @@ C:\Users\Laurenz Haase\Meine_Projekte\VisualStudio\Mühle\obj\Debug\net7.0\refin
 C:\Users\Laurenz Haase\Meine_Projekte\VisualStudio\Mühle\obj\Debug\net7.0\Mühle.pdb
 C:\Users\Laurenz Haase\Meine_Projekte\VisualStudio\Mühle\obj\Debug\net7.0\Mühle.genruntimeconfig.cache
 C:\Users\Laurenz Haase\Meine_Projekte\VisualStudio\Mühle\obj\Debug\net7.0\ref\Mühle.dll
+C:\Users\Laurenz Haase\Meine_Projekte\VisualStudio\Mühle\obj\Debug\net7.0\Mühle.sourcelink.json
