@@ -5,11 +5,13 @@ using System.Linq;
 using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+
 
 namespace Mühle
 {
-	internal class Board
-{
+	internal class Board : ICloneable
+	{
 
 		public static int[][] MILLS = new int[][]
 		{
@@ -91,6 +93,38 @@ namespace Mühle
 
 		}
 
+		public object Clone()
+		{
+			// Tiefe Kopie erstellen
+			return new Board {
+				board = this.board,
+				active = this.active,
+				activeChar = this.activeChar,
+				enemyChar = this.enemyChar,
+				state = this.state,
+				playedMoves = this.playedMoves,
+				positionsHistory = this.positionsHistory,
+				xStonesLeft = this.xStonesLeft,
+				oStonesLeft= this.oStonesLeft,
+				activeCanCapture = this.activeCanCapture,
+			
+			};
+
+		}
+
+		public bool JsonCompare(object another)
+		{
+			if (ReferenceEquals(this, another)) return true;
+			if ((this == null) || (another == null)) return false;
+			if (this.GetType() != another.GetType()) return false;
+
+			var objJson = JsonConvert.SerializeObject(this);
+			var anotherJson = JsonConvert.SerializeObject(another);
+
+			return objJson == anotherJson;
+		}
+
+
 		public string positionToString()
 		{
 			string res = "";
@@ -128,7 +162,7 @@ namespace Mühle
 			{
 				state = GameState.Finished;
 			}
-			else if (positionsHistory.Contains(positionToString()))
+			else if (positionsHistory.Where(key=> key == positionToString()).Count()==3)
 			{
 				state = GameState.Draw;
 			}
@@ -144,7 +178,8 @@ namespace Mühle
 		public void MakeMoveFromUI(Move move)
 		{
 
-			positionsHistory.Add(positionToString());
+			string boardString = positionToString();
+			
 
 			Move[] allMoves = MoveGeneration.GenerateLegalMoves(this);
 
@@ -228,7 +263,7 @@ namespace Mühle
 			(activeChar, enemyChar) = (enemyChar, activeChar);
 			activeCanCapture = false;
 
-
+			positionsHistory.Add(boardString);
 
 
 
@@ -450,14 +485,7 @@ namespace Mühle
 			}
 
 
-			Console.WriteLine();
-			Move[] moves = MoveGeneration.GenerateLegalMoves(this);
-			foreach (Move move in moves)
-			{
-				Console.WriteLine(move.ToString());
-			}
 
-			Console.WriteLine(moves.Length + " Moves");
 
 			Console.WriteLine(state);
 		}

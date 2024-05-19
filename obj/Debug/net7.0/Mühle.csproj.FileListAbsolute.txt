@@ -13,3 +13,6 @@ C:\Users\Laurenz Haase\Meine_Projekte\VisualStudio\Mühle\obj\Debug\net7.0\Mühl
 C:\Users\Laurenz Haase\Meine_Projekte\VisualStudio\Mühle\obj\Debug\net7.0\Mühle.genruntimeconfig.cache
 C:\Users\Laurenz Haase\Meine_Projekte\VisualStudio\Mühle\obj\Debug\net7.0\ref\Mühle.dll
 C:\Users\Laurenz Haase\Meine_Projekte\VisualStudio\Mühle\obj\Debug\net7.0\Mühle.sourcelink.json
+C:\Users\Laurenz Haase\Meine_Projekte\VisualStudio\Mühle\obj\Debug\net7.0\Mühle.csproj.AssemblyReference.cache
+C:\Users\Laurenz Haase\Meine_Projekte\VisualStudio\Mühle\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\Laurenz Haase\Meine_Projekte\VisualStudio\Mühle\obj\Debug\net7.0\Mühle.csproj.Up2Date

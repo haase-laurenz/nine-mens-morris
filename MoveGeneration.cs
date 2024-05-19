@@ -33,7 +33,33 @@ namespace Mühle
 				}
 			}
 
-			
+			foreach (int[] mill in Board.MILLS)
+			{
+				bool millFound = true;
+
+				for (int i = 0; i < 3; i++)
+				{
+					int field = mill[i];
+
+					if (board.board[field] != board.enemyChar)
+					{
+						millFound = false;
+						break; // Keine Mühle, zum nächsten Mill gehen
+					}
+
+
+				}
+				// Wenn eine Mühle gefunden wurde, gib true zurück
+				if (millFound)
+				{
+					enemyPieces.Remove(mill[0]);
+					enemyPieces.Remove(mill[1]);
+					enemyPieces.Remove(mill[2]);
+				}
+
+			}
+
+
 
 
 
@@ -73,39 +99,47 @@ namespace Mühle
 				if (board.state == GameState.MidGame)
 				{
 
-					foreach (int field in activePieces)
-					{
+						
+					foreach (int field in activePieces) { 
 
-						int[] neighbours = Board.EDGES[field];
-
-						for (int k = 0; k < neighbours.Length; k++)
-						{
-							int neighbour = neighbours[k];
-							if (board.board[neighbour] == ' ')
+							if (board.board[field] == board.activeChar)
 							{
 
-								board.board[neighbour] = board.activeChar;
-								board.board[field] = ' ';
+								int[] neighbours = Board.EDGES[field];
 
-								board.UpdateCanCapture(field);
-
-								if (board.activeCanCapture)
+								for (int k = 0; k < neighbours.Length; k++)
 								{
-									foreach (int enemyPiece in enemyPieces)
+									int neighbour = neighbours[k];
+									if (board.board[neighbour] == ' ')
 									{
-										moves.Add(new Move(field, neighbour, enemyPiece));
+
+										board.board[neighbour] = board.activeChar;
+										board.board[field] = ' ';
+
+										board.UpdateCanCapture(neighbour);
+
+										if (board.activeCanCapture)
+										{
+											foreach (int enemyPiece in enemyPieces)
+											{
+												moves.Add(new Move(field, neighbour, enemyPiece));
+											}
+										}
+										else
+										{
+											moves.Add(new Move(field, neighbour, -1));
+										}
+
+										board.activeCanCapture = false;
+										board.board[field] = board.activeChar;
+										board.board[neighbour] = ' ';
+
 									}
-								}
-								else
-								{
-									moves.Add(new Move(field, neighbour, -1));
+
 								}
 
-								board.activeCanCapture = false;
-								board.board[field] = board.activeChar;
-								board.board[neighbour] = ' ';
+							
 
-							}
 
 						}
 

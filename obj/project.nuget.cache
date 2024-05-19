@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "3QjbhHngQf3nFB/ZzPeDet7gWmrpRFbBMQCiuxkoQ2DV8CnTMJYNiBgP5d2N/aQ8rqiheUXN1++02l79lGx5Ag==",
+  "dgSpecHash": "q2POgC0bqAlzSxHr2IERgruVp6hy60wAz031pBr/yX/cTxYH5tDw2oGcjMOuEBZ8jWib4vLzpaph9/kgrU8S2A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\Mühle\\Mühle.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Laurenz Haase\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

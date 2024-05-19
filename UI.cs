@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Reflection;
 
 namespace Mühle
 {
@@ -11,6 +13,7 @@ namespace Mühle
 
 		private bool runningGame;
 		private Board currentBoard;
+		private string botEnemy = "";
 
 		public UI() {
 			runningGame = false;
@@ -29,35 +32,54 @@ namespace Mühle
 
 					if (currentBoard?.state != GameState.Finished && currentBoard?.state != GameState.Draw)
 					{
-						currentBoard?.Display();
-						Console.Write("Input Move/Command: ");
-						currentBoard?.updateBoardFromUI();
-						if (false)
+
+						if (botEnemy == "" || currentBoard.active == 0)
 						{
-							Move[] moves = MoveGeneration.GenerateLegalMoves(currentBoard);
 
-							Random random = new Random();
-							int randomIndex = random.Next(0, moves.Length);
-
-							Move randomMove = moves[randomIndex];
-
-							currentBoard?.MakeMoveFromUI(randomMove);
-							Console.WriteLine(randomMove);
-							//Thread.Sleep(10);
+							currentBoard?.Display();
+							Console.Write("Input Move/Command: ");
 							currentBoard?.updateBoardFromUI();
+
+						}
+						else
+						{
+
+							Assembly assembly = Assembly.GetExecutingAssembly();
+							Type type = assembly.GetType("Mühle.BOT_MAIN_" + botEnemy);
+							object instance = Activator.CreateInstance(type);
+							MethodInfo method = type.GetMethod("Think");
+
+							object[] parameters = new object[] { currentBoard };
+
+							object returnValue = method.Invoke(instance, parameters);
+
+							if (returnValue != null)
+							{
+								Move move = (Move)returnValue;
+								currentBoard.MakeMoveFromUI(move);
+								Console.WriteLine(move);
+							}
+							else
+							{
+								Console.WriteLine("Error exec THINK method");
+							}
+
+							
 							continue;
 						}
+						
 
 					}
 					else
 					{
+						botEnemy = "";
 						Console.ForegroundColor = ConsoleColor.Blue;
 						if (currentBoard.state == GameState.Finished)
 						{
 							Console.WriteLine($"{currentBoard.enemyChar} has won.");
 						}else
 						{
-							Console.WriteLine("Draw by repitition");
+							Console.WriteLine("Draw by 3-fold Repitition");
 						}
 
 						Console.WriteLine("");
@@ -74,7 +96,7 @@ namespace Mühle
 
 
 				
-				string? input = Console.ReadLine();
+				string? input = Console.ReadLine().Trim();
 				
 				if (input == "help" || input == "-help")
 				{
@@ -127,15 +149,82 @@ namespace Mühle
 					Console.Clear();
 					continue;
 				}
+				else if (input.Trim().Split()[0] == "play")
+				{
+					botEnemy = input.Trim().Split()[1];
+					NewGame();
+					continue;
+				}
 				else if (input == "test")
 				{
 					SpeedTest.MoveGenTest(100000);
+					continue;
+				}
+				else if (input.Trim().Split()[0] == "save")
+				{
+
+					
+					string botName = input.Trim().Split()[1]+".cs";
+					string destinationDirectory = "C:/Users/Laurenz Haase/Meine_Projekte/VisualStudio/Mühle/bots/";
+					string sourceFilePath = "C:/Users/Laurenz Haase/Meine_Projekte/VisualStudio/Mühle/BOT_MAIN.cs";
+
+					try
+					{
+
+						// Sicherstellen, dass der Zielordner existiert
+						if (Directory.Exists(destinationDirectory))
+						{
+							// Erstellen des vollständigen Zielpfads
+							string destinationFilePath = Path.Combine(destinationDirectory, Path.GetFileName(botName));
+
+							string fileContent = File.ReadAllText(sourceFilePath);
+
+							fileContent = fileContent.Replace("BOT_MAIN", "BOT_MAIN_"+input.Trim().Split()[1]);
+							//fileContent = fileContent.Replace("private", "public");
+
+							File.WriteAllText(destinationFilePath, fileContent);
+
+							Console.WriteLine("File copied successfully.");
+
+						}
+						else
+						{
+							Console.WriteLine("Destination directory does not exist.");
+						}
+					}
+					catch 
+					{
+						Console.WriteLine("Saving failed");
+					}
+
 					continue;
 				}
 				else if (input == "perft")
 				{
 					SpeedTest.PerftTest();
 					continue;
+				}
+				else if (input.Trim().Split()[0] == "botgame")
+				{
+					string[] res = input.Trim().Split();
+					if (res.Length == 3)
+					{
+						string Bot1 = res[1];
+						string Bot2 = res[2];
+						AI_Manager.playRandomMoveGenGames(100, Bot1, Bot2);
+						continue;
+					}
+					else
+					{
+						Console.WriteLine();
+						Console.ForegroundColor = ConsoleColor.Red;
+						Console.WriteLine("Please specify more information. Type 'help -botgame' for more information.");
+						Console.ForegroundColor = ConsoleColor.White;
+						Console.WriteLine();
+						continue;
+					}
+					
+					
 				}
 				else if (input == "help -moves")
 				{
@@ -361,6 +450,17 @@ namespace Mühle
 			currentBoard = new Board();
 
 
+		}
+
+		private DirectoryInfo TryGetSolutionDirectoryInfo(string currentPath = null)
+		{
+			var directory = new DirectoryInfo(
+				currentPath ?? Directory.GetCurrentDirectory());
+			while (directory != null && !directory.GetFiles("*.sln").Any())
+			{
+				directory = directory.Parent;
+			}
+			return directory;
 		}
 
 	}
