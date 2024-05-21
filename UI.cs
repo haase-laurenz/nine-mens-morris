@@ -14,6 +14,7 @@ namespace Mühle
 		private bool runningGame;
 		private Board currentBoard;
 		private string botEnemy = "";
+		private BOT_MAIN_v8 autoBot = new BOT_MAIN_v8();
 
 		public UI() {
 			runningGame = false;
@@ -43,7 +44,7 @@ namespace Mühle
 						}
 						else
 						{
-
+							/*
 							Assembly assembly = Assembly.GetExecutingAssembly();
 							Type type = assembly.GetType("Mühle.BOT_MAIN_" + botEnemy);
 							object instance = Activator.CreateInstance(type);
@@ -58,13 +59,21 @@ namespace Mühle
 								Move move = (Move)returnValue;
 								currentBoard.MakeMoveFromUI(move);
 								Console.WriteLine(move);
+								currentBoard?.updateBoardFromUI();
 							}
 							else
 							{
 								Console.WriteLine("Error exec THINK method");
 							}
+							*/
+							Move move = autoBot.Think(currentBoard);
+							currentBoard.MakeMoveFromUI(move);
+							Console.WriteLine(move);
+							currentBoard?.updateBoardFromUI();
 
-							
+							Console.WriteLine("Eval: "+autoBot.bestScore);
+
+
 							continue;
 						}
 						
@@ -211,7 +220,7 @@ namespace Mühle
 					{
 						string Bot1 = res[1];
 						string Bot2 = res[2];
-						AI_Manager.playRandomMoveGenGames(100, Bot1, Bot2);
+						AI_Manager.playRandomMoveGenGames(10, Bot1, Bot2);
 						continue;
 					}
 					else

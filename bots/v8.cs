@@ -8,18 +8,19 @@ using System.Threading.Tasks;
 namespace Mühle
 {
 
-	internal class BOT_MAIN_v5
+	internal class BOT_MAIN_v8
 	{
 
 		private Move bestMoveRoot;
+		public int bestScore;
 
 		public Move Think(Board board)
 		{
-
+			bestScore = -1;
 			Move[] moves = MoveGeneration.GenerateLegalMoves(board);
 			bestMoveRoot = moves[0];
 
-			Search(board, -30000, 30000, 5, 0);
+			Search(board, -30000, 30000, 6, 0);
 
 			return bestMoveRoot;
 
@@ -59,7 +60,11 @@ namespace Mühle
 					{
 						best = score;
 
-						if (ply == 0) bestMoveRoot = move;
+						if (ply == 0)
+						{
+							bestMoveRoot = move;
+							bestScore = score;
+						}
 
 						// Improve alpha
 						alpha = Math.Max(alpha, score);

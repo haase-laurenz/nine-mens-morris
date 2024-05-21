@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mühle")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+06c0d1b0fa86214b7d5add18b41d83cd17accdb3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+90cb9e420e0cacaedee6955964ce50e8650f80e3")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mühle")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mühle")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

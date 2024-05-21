@@ -19,7 +19,7 @@ namespace Mühle
 			Move[] moves = MoveGeneration.GenerateLegalMoves(board);
 			bestMoveRoot = moves[0];
 
-			Search(board, -30000, 30000, 2, 0);
+			Search(board, -30000, 30000, 8, 0);
 
 			return bestMoveRoot;
 
@@ -28,7 +28,7 @@ namespace Mühle
 			{
 
 				if (board.state == GameState.Draw) return 0;
-				if (board.state == GameState.Finished) return 1000;
+				if (board.state == GameState.Finished) return -1000;
 
 				if (depth == 0)
 				{
@@ -80,23 +80,21 @@ namespace Mühle
 
 				foreach (int[] mill in Board.MILLS)
 				{
-
-					int xAdder = 1;
-					int oAdder = 1;
-
+					int xAdd = 1;
+					int oAdd = 1;
 					for (int i = 0; i < 3; i++)
 					{
 						int field = mill[i];
 
-						if (board.board[field] == 'X')
+						if (board.board[field] != 'X')
 						{
-							score += xAdder;
-							xAdder++;
+							score += xAdd;
+							xAdd += 2;
 						}
-						else if (board.board[field] == 'O')
+						else if (board.board[field] != 'O')
 						{
-							score -= oAdder;
-							oAdder++;
+							score -= oAdd;
+							xAdd += 2;
 						}
 
 
@@ -104,11 +102,11 @@ namespace Mühle
 				}
 
 				return (board.active == 0) ? score : -score;
+
 			}
 
 
 		}
-
 
 	}
 }

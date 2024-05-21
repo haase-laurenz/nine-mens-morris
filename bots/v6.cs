@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Mühle
 {
 
-	internal class BOT_MAIN_v5
+	internal class BOT_MAIN_v6
 	{
 
 		private Move bestMoveRoot;
@@ -77,18 +77,28 @@ namespace Mühle
 			{
 
 				int score = 0;
-				for (int i = 0; i < 24; i++)
+
+				foreach (int[] mill in Board.MILLS)
 				{
-
-					if (board.board[i] == 'X')
+					int xAdd = 1;
+					int oAdd = 1;
+					for (int i = 0; i < 3; i++)
 					{
-						score++;
-					}
-					else if (board.board[i] == 'O')
-					{
-						score--;
-					}
+						int field = mill[i];
 
+						if (board.board[field] != 'X')
+						{
+							score += xAdd;
+							xAdd += 2;
+						}
+						else if (board.board[field] != 'O')
+						{
+							score -= oAdd;
+							xAdd += 2;
+						}
+
+
+					}
 				}
 
 				return (board.active == 0) ? score : -score;

@@ -15,6 +15,8 @@ namespace Mühle
 		{
 
 			Move[] moves = MoveGeneration.GenerateLegalMoves(board);
+
+			if (moves.Length == 0) { return Move.NullMove;  }
 			Move bestMove = moves[0];
 			int bestScore = int.MinValue;
 

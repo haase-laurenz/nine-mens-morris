@@ -55,6 +55,13 @@ namespace Mühle
 				while (board.state != GameState.Finished && board.state != GameState.Draw)
 				{
 
+					board.updateBoardFromUI();
+
+					if (MoveGeneration.GenerateLegalMoves(board).Length == 0)
+					{
+						throw new Exception("");
+					}
+
 					Board boardBefore = (Board)board.Clone();
 
 					if(display) board.Display();

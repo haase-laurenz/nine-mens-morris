@@ -3,39 +3,47 @@
   "WorkspaceRootPath": "C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\ai_manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|c:\\users\\laurenz haase\\meine_projekte\\visualstudio\\m\u00FChle\\bots\\v9.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|solutionrelative:bots\\v9.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|c:\\users\\laurenz haase\\meine_projekte\\visualstudio\\m\u00FChle\\ai_manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|solutionrelative:ai_manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|c:\\users\\laurenz haase\\meine_projekte\\visualstudio\\m\u00FChle\\bots\\v5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|solutionrelative:bots\\v5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|c:\\users\\laurenz haase\\meine_projekte\\visualstudio\\m\u00FChle\\bots\\v4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|solutionrelative:bots\\v4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|c:\\users\\laurenz haase\\meine_projekte\\visualstudio\\m\u00FChle\\bots\\v3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|solutionrelative:bots\\v3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|c:\\users\\laurenz haase\\meine_projekte\\visualstudio\\m\u00FChle\\bot_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|solutionrelative:bot_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|c:\\users\\laurenz haase\\meine_projekte\\visualstudio\\m\u00FChle\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|solutionrelative:board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|c:\\users\\laurenz haase\\meine_projekte\\visualstudio\\m\u00FChle\\bots\\v1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|c:\\users\\laurenz haase\\meine_projekte\\visualstudio\\m\u00FChle\\bots\\v8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|solutionrelative:bots\\v8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\bots\\v1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|solutionrelative:bots\\v1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\bot_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|solutionrelative:bot_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\ui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|solutionrelative:ui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|c:\\users\\laurenz haase\\meine_projekte\\visualstudio\\m\u00FChle\\bots\\v2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\bots\\v5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|solutionrelative:bots\\v5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\bots\\v3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|solutionrelative:bots\\v3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\bots\\v4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|solutionrelative:bots\\v4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\bots\\v2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2D1448C9-F6CB-43C9-9FA2-98871C2FFF90}|M\u00FChle.csproj|solutionrelative:bots\\v2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -46,68 +54,93 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "v4.cs",
-              "DocumentMoniker": "C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\bots\\v4.cs",
-              "RelativeDocumentMoniker": "bots\\v4.cs",
-              "ToolTip": "C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\bots\\v4.cs",
-              "RelativeToolTip": "bots\\v4.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAqwB4AAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T12:52:57.289Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "v9.cs",
+              "DocumentMoniker": "C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\bots\\v9.cs",
+              "RelativeDocumentMoniker": "bots\\v9.cs",
+              "ToolTip": "C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\bots\\v9.cs",
+              "RelativeToolTip": "bots\\v9.cs",
+              "ViewState": "AQIAAGYAAAAAAAAAAAAAAJEAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T16:35:49.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "v8.cs",
+              "DocumentMoniker": "C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\bots\\v8.cs",
+              "RelativeDocumentMoniker": "bots\\v8.cs",
+              "ToolTip": "C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\bots\\v8.cs",
+              "RelativeToolTip": "bots\\v8.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T15:18:11.024Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "v4.cs",
+              "DocumentMoniker": "C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\bots\\v4.cs",
+              "RelativeDocumentMoniker": "bots\\v4.cs",
+              "ToolTip": "C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\bots\\v4.cs",
+              "RelativeToolTip": "bots\\v4.cs",
+              "ViewState": "AQIAADQAAAAAAAAAAAAUwFwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T12:52:57.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "v5.cs",
               "DocumentMoniker": "C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\bots\\v5.cs",
               "RelativeDocumentMoniker": "bots\\v5.cs",
               "ToolTip": "C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\bots\\v5.cs",
               "RelativeToolTip": "bots\\v5.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAgwDQAAAAAAAAA",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAgwE4AAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-19T14:52:38.299Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "BOT_MAIN.cs",
               "DocumentMoniker": "C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\BOT_MAIN.cs",
               "RelativeDocumentMoniker": "BOT_MAIN.cs",
               "ToolTip": "C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\BOT_MAIN.cs",
               "RelativeToolTip": "BOT_MAIN.cs",
-              "ViewState": "AQIAADcAAAAAAAAAAAAowDYAAAAaAAAA",
+              "ViewState": "AQIAABMAAAAAAAAAAAAgwBUAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-19T14:51:05.002Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "v3.cs",
               "DocumentMoniker": "C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\bots\\v3.cs",
               "RelativeDocumentMoniker": "bots\\v3.cs",
               "ToolTip": "C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\bots\\v3.cs",
               "RelativeToolTip": "bots\\v3.cs",
-              "ViewState": "AQIAADEAAAAAAAAAAAAgwEsAAAAEAAAA",
+              "ViewState": "AQIAADQAAAAAAAAAAAAgwE0AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-19T12:45:32.017Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "v2.cs",
               "DocumentMoniker": "C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\bots\\v2.cs",
               "RelativeDocumentMoniker": "bots\\v2.cs",
@@ -115,57 +148,56 @@
               "RelativeToolTip": "bots\\v2.cs",
               "ViewState": "AQIAAAsAAAAAAAAAAAAQwBMAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T12:44:58.675Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-19T12:44:58.675Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "v1.cs",
               "DocumentMoniker": "C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\bots\\v1.cs",
               "RelativeDocumentMoniker": "bots\\v1.cs",
               "ToolTip": "C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\bots\\v1.cs",
               "RelativeToolTip": "bots\\v1.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAowCUAAAAHAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-19T12:44:58.226Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "UI.cs",
               "DocumentMoniker": "C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\UI.cs",
               "RelativeDocumentMoniker": "UI.cs",
               "ToolTip": "C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\UI.cs",
               "RelativeToolTip": "UI.cs",
-              "ViewState": "AQIAAIcAAAAAAAAAAAAowFwAAAAAAAAA",
+              "ViewState": "AQIAACMAAAAAAAAAAAAAwEkAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-14T15:41:21.918Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AI_Manager.cs",
               "DocumentMoniker": "C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\AI_Manager.cs",
               "RelativeDocumentMoniker": "AI_Manager.cs",
               "ToolTip": "C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\AI_Manager.cs",
               "RelativeToolTip": "AI_Manager.cs",
-              "ViewState": "AQIAAC4AAAAAAAAAAAAgwE0AAAAHAAAA",
+              "ViewState": "AQIAACkAAAAAAAAAAAAawD0AAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-17T15:20:52.88Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "Board.cs",
               "DocumentMoniker": "C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\Board.cs",
               "RelativeDocumentMoniker": "Board.cs",
               "ToolTip": "C:\\Users\\Laurenz Haase\\Meine_Projekte\\VisualStudio\\M\u00FChle\\Board.cs",
               "RelativeToolTip": "Board.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHsAAAAhAAAA",
+              "ViewState": "AQIAAJAAAAAAAAAAAAAawKIAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-14T15:40:38.085Z",
               "EditorCaption": ""
